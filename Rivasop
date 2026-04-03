@@ -138,35 +138,7 @@ end)
 submitBtn.MouseButton1Click:Connect(function()
     if inputBox.Text == VALID_KEY then
         keyGui:Destroy()
-
-        local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/SiriusSoftwareLtd/Rayfield/main/source.lua'))()
-
-        local Window = Rayfield:CreateWindow({
-            Name = "itzboxyy scripts",
-            LoadingTitle = "itzboxyy scripts",
-            LoadingSubtitle = "Loading...",
-            ConfigurationSaving = {
-                Enabled = false,
-            },
-            KeySystem = false,
-        })
-
-        local MainTab = Window:CreateTab("Main", "star")
-
-        MainTab:CreateButton({
-            Name = "Execute Script",
-            Callback = function()
-                loadstring(game:HttpGet("https://pastefy.app/YiGY38uo/raw"))()
-            end
-        })
-
-        Rayfield:Notify({
-            Title = "itzboxyy scripts",
-            Content = "Key accepted! Welcome.",
-            Duration = 4,
-            Image = 4483362458,
-        })
-
+        loadstring(game:HttpGet("https://pastefy.app/YiGY38uo/raw"))()
     else
         statusLabel.Text = "❌ Invalid key. Click 'Get Key' to get yours."
         inputBox.Text = ""
